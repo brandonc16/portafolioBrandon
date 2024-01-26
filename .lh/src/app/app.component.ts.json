@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/app.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1706304537204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706304676549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,19 @@\n export class AppComponent  implements OnInit{\n   title = 'EvidenceBrandon';\n \n   ngOnInit(): void {\n-    // Agregar una clase adicional para iniciar la animación\n+    // Agregar una clase adicional para iniciar la animación en el mensaje\n     const messageElement = document.querySelector('.message');\n     if (messageElement) {\n       messageElement.classList.add('start-typing');\n     }\n+\n+    // Después de 3500 ms (duración de la animación en mensaje), iniciar la animación en el nombre\n+    setTimeout(() => {\n+      const nameElement = document.querySelector('.myName');\n+      if (nameElement) {\n+        nameElement.classList.add('start-typing');\n+      }\n+    }, 3500);\n   }\n }\n"
+                },
+                {
+                    "date": 1706304757180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,19 +8,19 @@\n export class AppComponent  implements OnInit{\n   title = 'EvidenceBrandon';\n \n   ngOnInit(): void {\n-    // Agregar una clase adicional para iniciar la animación en el mensaje\n-    const messageElement = document.querySelector('.message');\n-    if (messageElement) {\n-      messageElement.classList.add('start-typing');\n-    }\n-\n-    // Después de 3500 ms (duración de la animación en mensaje), iniciar la animación en el nombre\n-    setTimeout(() => {\n-      const nameElement = document.querySelector('.myName');\n-      if (nameElement) {\n-        nameElement.classList.add('start-typing');\n-      }\n-    }, 3500);\n+     // Agregar una clase adicional para iniciar la animación en el mensaje\n+     const messageElement = document.querySelector('.message');\n+     if (messageElement) {\n+       messageElement.classList.add('start-typing');\n+     }\n+ \n+     // Después de 3500 ms (duración de la animación en mensaje), iniciar la animación en el nombre\n+     setTimeout(() => {\n+       const nameElement = document.querySelector('.myName');\n+       if (nameElement) {\n+         nameElement.classList.add('start-typing');\n+       }\n+     }, 3500);\n   }\n }\n"
+                }
+            ],
+            "date": 1706304537204,
+            "name": "Commit-0",
+            "content": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent  implements OnInit{\n  title = 'EvidenceBrandon';\n\n  ngOnInit(): void {\n    // Agregar una clase adicional para iniciar la animación\n    const messageElement = document.querySelector('.message');\n    if (messageElement) {\n      messageElement.classList.add('start-typing');\n    }\n  }\n}\n"
+        }
+    ]
+}

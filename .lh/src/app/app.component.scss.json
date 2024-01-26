@@ -1,0 +1,130 @@
+{
+    "sourceFile": "src/app/app.component.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1706304506572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706304567831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -328,9 +328,9 @@\n \n //mensaje animacion \n .message {\n     overflow: hidden;\n-    border-right: .15em solid orange; /* Puedes ajustar el color y el grosor del cursor de escritura */\n+    border-right: .15em solid rgb(148, 207, 246); /* Puedes ajustar el color y el grosor del cursor de escritura */\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n     animation:\n"
+                },
+                {
+                    "date": 1706304582748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -351,9 +351,9 @@\n     from, to {\n       border-color: transparent;\n     }\n     50% {\n-      border-color: orange;\n+      border-color: (148, 207, 246);\n     }\n   }\n \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706304588589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -351,9 +351,9 @@\n     from, to {\n       border-color: transparent;\n     }\n     50% {\n-      border-color: (148, 207, 246);\n+      border-color: rgb(148, 207, 246);\n     }\n   }\n \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706304650632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -328,32 +328,48 @@\n \n //mensaje animacion \n .message {\n     overflow: hidden;\n-    border-right: .15em solid rgb(148, 207, 246); /* Puedes ajustar el color y el grosor del cursor de escritura */\n+    border-right: .15em solid orange;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n-    animation:\n-      typing 3.5s steps(40, end),\n-      blink-caret .75s step-end infinite;\n+    animation: typing-message 3.5s steps(40, end),\n+               blink-caret .75s step-end infinite;\n   }\n   \n-  @keyframes typing {\n+  .myName {\n+    overflow: hidden;\n+    white-space: nowrap;\n+    margin: 0 auto;\n+    letter-spacing: .15em;\n+    animation: typing-name 3.5s steps(40, end),\n+               blink-caret .75s step-end infinite;\n+  }\n+  \n+  @keyframes typing-message {\n     from {\n       width: 0;\n     }\n     to {\n       width: 100%;\n     }\n   }\n   \n+  @keyframes typing-name {\n+    from {\n+      width: 0;\n+    }\n+    to {\n+      width: 100%;\n+    }\n+  }\n+  \n   @keyframes blink-caret {\n     from, to {\n       border-color: transparent;\n     }\n     50% {\n-      border-color: rgb(148, 207, 246);\n+      border-color: orange;\n     }\n   }\n-\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706304741712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -343,8 +343,9 @@\n     margin: 0 auto;\n     letter-spacing: .15em;\n     animation: typing-name 3.5s steps(40, end),\n                blink-caret .75s step-end infinite;\n+    opacity: 0; /* Inicialmente oculto */\n   }\n   \n   @keyframes typing-message {\n     from {\n@@ -357,11 +358,13 @@\n   \n   @keyframes typing-name {\n     from {\n       width: 0;\n+      opacity: 0; /* Inicialmente oculto */\n     }\n     to {\n       width: 100%;\n+      opacity: 1; /* Mostrar después de la animación del mensaje */\n     }\n   }\n   \n   @keyframes blink-caret {\n"
+                },
+                {
+                    "date": 1706304815370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -341,9 +341,9 @@\n     overflow: hidden;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n-    animation: typing-name 3.5s steps(40, end),\n+    animation: typing-name 3.5s steps(40, end) 3.5s, /* 3.5s de retraso para iniciar después de la animación de message */\n                blink-caret .75s step-end infinite;\n     opacity: 0; /* Inicialmente oculto */\n   }\n   \n"
+                },
+                {
+                    "date": 1706304877271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -341,9 +341,9 @@\n     overflow: hidden;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n-    animation: typing-name 3.5s steps(40, end) 3.5s, /* 3.5s de retraso para iniciar después de la animación de message */\n+    animation: typing-name 3.5s steps(40, end) 3.5s forwards, /* 3.5s de retraso para iniciar después de la animación de message, y \"forwards\" para mantener el último estado */\n                blink-caret .75s step-end infinite;\n     opacity: 0; /* Inicialmente oculto */\n   }\n   \n"
+                },
+                {
+                    "date": 1706304922809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -328,9 +328,9 @@\n \n //mensaje animacion \n .message {\n     overflow: hidden;\n-    border-right: .15em solid orange;\n+    border-right: .15em solid rgb(170, 231, 235);\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n     animation: typing-message 3.5s steps(40, end),\n@@ -371,8 +371,8 @@\n     from, to {\n       border-color: transparent;\n     }\n     50% {\n-      border-color: orange;\n+      border-color: rgb(142, 213, 229);\n     }\n   }\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706304987293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -328,9 +328,9 @@\n \n //mensaje animacion \n .message {\n     overflow: hidden;\n-    border-right: .15em solid rgb(170, 231, 235);\n+    border-right: .15em solid orange;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n     animation: typing-message 3.5s steps(40, end),\n@@ -341,11 +341,11 @@\n     overflow: hidden;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n-    animation: typing-name 3.5s steps(40, end) 3.5s forwards, /* 3.5s de retraso para iniciar después de la animación de message, y \"forwards\" para mantener el último estado */\n-               blink-caret .75s step-end infinite;\n-    opacity: 0; /* Inicialmente oculto */\n+    animation: typing-name 3.5s steps(40, end) 3.5s forwards,\n+               blink-caret .75s step-end infinite; /* Agregada animación de cursor */\n+    opacity: 0;\n   }\n   \n   @keyframes typing-message {\n     from {\n@@ -358,21 +358,21 @@\n   \n   @keyframes typing-name {\n     from {\n       width: 0;\n-      opacity: 0; /* Inicialmente oculto */\n+      opacity: 0;\n     }\n     to {\n       width: 100%;\n-      opacity: 1; /* Mostrar después de la animación del mensaje */\n+      opacity: 1;\n     }\n   }\n   \n   @keyframes blink-caret {\n     from, to {\n       border-color: transparent;\n     }\n     50% {\n-      border-color: rgb(142, 213, 229);\n+      border-color: orange;\n     }\n   }\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706305025461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -338,13 +338,14 @@\n   }\n   \n   .myName {\n     overflow: hidden;\n+    border-right: .15em solid orange;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n-    animation: typing-name 3.5s steps(40, end) 3.5s forwards,\n-               blink-caret .75s step-end infinite; /* Agregada animación de cursor */\n+    animation: typing-message 3.5s steps(40, end),\n+               blink-caret .75s step-end infinite;\n     opacity: 0;\n   }\n   \n   @keyframes typing-message {\n"
+                },
+                {
+                    "date": 1706305034809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -338,14 +338,13 @@\n   }\n   \n   .myName {\n     overflow: hidden;\n-    border-right: .15em solid orange;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n-    animation: typing-message 3.5s steps(40, end),\n-               blink-caret .75s step-end infinite;\n+    animation: typing-name 3.5s steps(40, end) 3.5s forwards,\n+               blink-caret .75s step-end infinite; /* Agregada animación de cursor */\n     opacity: 0;\n   }\n   \n   @keyframes typing-message {\n"
+                },
+                {
+                    "date": 1706305103301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -332,18 +332,18 @@\n     border-right: .15em solid orange;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n-    animation: typing-message 3.5s steps(40, end),\n+    animation: typing-message 2.5s steps(40, end),\n                blink-caret .75s step-end infinite;\n   }\n   \n   .myName {\n     overflow: hidden;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n-    animation: typing-name 3.5s steps(40, end) 3.5s forwards,\n+    animation: typing-name 2s steps(40, end) 3.5s forwards,\n                blink-caret .75s step-end infinite; /* Agregada animación de cursor */\n     opacity: 0;\n   }\n   \n"
+                },
+                {
+                    "date": 1706305114481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -332,9 +332,9 @@\n     border-right: .15em solid orange;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n-    animation: typing-message 2.5s steps(40, end),\n+    animation: typing-message 3s steps(40, end),\n                blink-caret .75s step-end infinite;\n   }\n   \n   .myName {\n"
+                },
+                {
+                    "date": 1706305142615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -341,9 +341,9 @@\n     overflow: hidden;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n-    animation: typing-name 2s steps(40, end) 3.5s forwards,\n+    animation: typing-name 2s steps(40, end) 2.5s forwards,\n                blink-caret .75s step-end infinite; /* Agregada animación de cursor */\n     opacity: 0;\n   }\n   \n"
+                },
+                {
+                    "date": 1706305149844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -341,9 +341,9 @@\n     overflow: hidden;\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n-    animation: typing-name 2s steps(40, end) 2.5s forwards,\n+    animation: typing-name 2s steps(40, end) 2s forwards,\n                blink-caret .75s step-end infinite; /* Agregada animación de cursor */\n     opacity: 0;\n   }\n   \n"
+                },
+                {
+                    "date": 1706305193485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -328,9 +328,9 @@\n \n //mensaje animacion \n .message {\n     overflow: hidden;\n-    border-right: .15em solid orange;\n+    border-right: .15em solid rgb(255, 255, 255);\n     white-space: nowrap;\n     margin: 0 auto;\n     letter-spacing: .15em;\n     animation: typing-message 3s steps(40, end),\n"
+                },
+                {
+                    "date": 1706305200821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -371,8 +371,8 @@\n     from, to {\n       border-color: transparent;\n     }\n     50% {\n-      border-color: orange;\n+      border-color: rgb(199, 241, 242);\n     }\n   }\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706305801485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -318,10 +318,10 @@\n .cv{\n     height: 30px;\n     margin-right: 15px;\n     background-color: #9CC7E8;\n-    border-radius: 20px;\n-    padding: 10px;\n+    border-radius: 10px;\n+    padding: 12px;\n     font-size: 20px;\n     color: white;\n }\n \n"
+                },
+                {
+                    "date": 1706305948943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,9 +164,9 @@\n     display: flex;\n     font-size: 1.2rem;\n     font-weight: 700;\n     margin-bottom: 2rem;\n-    margin-top: 0;\n+    margin-top: 20px;\n     padding: 0 7rem;\n     gap: 6%;\n }\n .line1{\n"
+                },
+                {
+                    "date": 1706305976333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,9 +164,9 @@\n     display: flex;\n     font-size: 1.2rem;\n     font-weight: 700;\n     margin-bottom: 2rem;\n-    margin-top: 20px;\n+    margin-top: 50px;\n     padding: 0 7rem;\n     gap: 6%;\n }\n .line1{\n"
+                },
+                {
+                    "date": 1706306019679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -242,8 +242,9 @@\n     color: #f3f3f3;\n     margin: 0 0 4rem;\n     padding: 3rem 0;\n     text-align: center;\n+    margin-top: 20px;\n }\n .teamView{\n     display: grid;\n     grid-gap: 1rem;\n"
+                },
+                {
+                    "date": 1706306056745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -242,9 +242,9 @@\n     color: #f3f3f3;\n     margin: 0 0 4rem;\n     padding: 3rem 0;\n     text-align: center;\n-    margin-top: 20px;\n+    margin-top: 90px;\n }\n .teamView{\n     display: grid;\n     grid-gap: 1rem;\n"
+                },
+                {
+                    "date": 1706306082660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -281,8 +281,9 @@\n     margin: 3rem 7rem;\n }\n \n .containerPortafolio{\n+    margin-top: 40px;\n     margin: 3rem 7rem;\n }\n .viewPortafolio{\n     display: grid;\n"
+                },
+                {
+                    "date": 1706306186602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -242,9 +242,9 @@\n     color: #f3f3f3;\n     margin: 0 0 4rem;\n     padding: 3rem 0;\n     text-align: center;\n-    margin-top: 90px;\n+    margin-top: 50px;\n }\n .teamView{\n     display: grid;\n     grid-gap: 1rem;\n"
+                },
+                {
+                    "date": 1706307092691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,9 +126,9 @@\n }\n \n \n .line{\n-    border-left: 2px solid #CF897F;\n+    border-left: 2px solid #323232;\n     height: 2rem;\n }\n \n .logoExp{\n"
+                },
+                {
+                    "date": 1706307100402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,9 +126,9 @@\n }\n \n \n .line{\n-    border-left: 2px solid #323232;\n+    border-left: 2px solid #605f5f;\n     height: 2rem;\n }\n \n .logoExp{\n"
+                },
+                {
+                    "date": 1706307108386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,9 +126,9 @@\n }\n \n \n .line{\n-    border-left: 2px solid #605f5f;\n+    border-left: 2px solid #7a7a7a;\n     height: 2rem;\n }\n \n .logoExp{\n"
+                },
+                {
+                    "date": 1706307113840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,9 +126,9 @@\n }\n \n \n .line{\n-    border-left: 2px solid #7a7a7a;\n+    border-left: 2px solid #979696;\n     height: 2rem;\n }\n \n .logoExp{\n"
+                }
+            ],
+            "date": 1706304506572,
+            "name": "Commit-0",
+            "content": "// inician cambios del navbar \n\n.navbar{\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n    background-color: rgba(249, 249, 249, 0.695);\n    \n}\n.containerMain{\n    padding: 0 5rem;\n    margin-top: -2rem;\n}\n.logo{\n    color: black;\n    padding: 14px 180px;\n    text-decoration: none;\n    float: left;\n}\n\n\nli a {\n    color: black;\n    padding: 14px 16px;\n    text-decoration: none;\n    float: right;\n    margin-right: 30px;\n}\n\n.content ul{\n    list-style-type: none;\n    color: black;\n    padding: 14px 160px;\n    text-decoration: none !important;\n    \n}\n.content li{\n    \n    float: right;\n    margin-right: 30px;\n    \n}\n//termianan cambios del navbar \n\n// start container about me\n//.container{\n//    padding: 0 3rem;\n//}\n//start class home \n.home{\n    padding: 11.5rem  7rem;  \n    gap: 24%;\n    display: flex;\n    \n}\n.message{\n   \n    background-color:  #9CC7E8; //this shit is gonna be change\n    border-radius: 20px 20px 20px 0;\n    color: #fff;\n    font-size: 22px;\n    font-weight: 700;\n    letter-spacing: 2px;\n    padding: 10px 20px;\n \n    \n}\n.myName{\n    font-size: 4rem;\n    font-weight: 700;\n    \n}\n.work{\n    font-size: 1.5rem;\n    font-weight: 400;\n    margin-top: 0;\n}\n.myInfo{\n    align-items: center;\n    display: flex;\n    font-size: 1rem;\n    gap: 0.6rem;\n    margin-bottom: 0.5rem;\n    margin-top: 0;\n    \n}\n.myInfo a{\n    cursor: pointer;\n}\n\n.Photo img{\n    \n    border-radius: 1000px;\n    width: 19 rem !important;\n}\n.Photo{\n    margin-top: 0rem;\n}\n\n.contactNet{\n    display: flex;\n    gap: 0.8rem;\n}\n//finish container\n\n//star containter abaut my experience\n\n//.container1{\n//    padding: 0 3rem;\n//    margin-top: -2rem;\n//}\n.myExperience{\n    align-items: center;\n    background-color: rgb(249, 249, 249);\n    border-radius: 5rem;\n    box-shadow: 0 7px 10px rgb(0 0 0 / 10%);\n    display: flex;\n    justify-content: space-around;\n    margin: -2.5rem 7rem;\n    padding: 1rem 5rem;\n}\n.yearExperience{\n    align-items: center;\n    display: flex;\n    flex-direction: row;\n}\n\n\n.line{\n    border-left: 2px solid #CF897F;\n    height: 2rem;\n}\n\n.logoExp{\n    margin-right: 1rem;\n    padding: 0.5rem;\n    width: 80px;\n}\n.aboutMe{\n    align-items: center;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    padding: 8rem 0;\n    width: 100%;\n\n}\n\n.containerAboutMe{\n    align-items: center;\n    display: flex;\n    justify-content: space-around;\n    margin: 3rem 7rem;\n\n    padding: 9rem 0rem;\n    gap: 26%;\n\n\n}\n\n\n.containerSoftKills{\n    display: flex;\n    font-size: 1.2rem;\n    font-weight: 700;\n    margin-bottom: 2rem;\n    margin-top: 0;\n    padding: 0 7rem;\n    gap: 6%;\n}\n.line1{\n    border-bottom: solid 3px  #9CC7E8;\n    width: 57%;\n    height: 25px;\n}\n.viewSF{\n    display: grid;\n    grid-gap: 1.5rem;\n    gap: 1.5rem;\n    grid-template-columns: repeat(3,minmax(250px,1fr));\n    margin-bottom: 4rem;\n    width: 80%;\n    margin: 3rem 7rem;\n    \n}\n.cardsSF{\n    border-radius: 20px;\n    background: #ffffff;\n    box-shadow: inset 5px 5px 10px #f0f0f0,\n                inset -5px -5px 10px #ffffff;\n    display: flex;\n    flex-direction: column;\n    height: 100%;\n    justify-content: center;\n    padding: 2rem;\n    width: 100%;\n    text-align: center;\n    color: rgb(130, 130, 130);\n}\n.cardImg img{\n    height: 90px;\n    width: 90px;\n}\n.cardsSF:hover{\n    color:  #9CC7E8;\n\n    font-weight: bold;\n    \n}\n.cardImg{\n    margin: auto auto 2rem;\n    width: 50%;\n    text-align: center;\n}\n\n.viewSk{\n    margin: 2rem 7rem;\n    display: grid;\n    grid-gap: 4rem;\n    gap: 4rem;\n    grid-template-columns: repeat(6,minmax(40px,1fr));\n    margin-top: 3rem;\n    \n}\n.cardsSk{\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    flex-wrap: wrap;\n\n}\n.cardsSk img{\n    height: 40px;\n    width: 40px;\n    padding-left: 2%;\n}\n\n.projectIdea{\n    background-color:  #9CC7E8;\n    color: #f3f3f3;\n    margin: 0 0 4rem;\n    padding: 3rem 0;\n    text-align: center;\n}\n.teamView{\n    display: grid;\n    grid-gap: 1rem;\n    gap: 1rem;\n    grid-template-columns: repeat(3,1fr);\n    margin: 5rem 0;\n\n}\n.teamView img{\n    margin-bottom: 2rem;\n    width: 60%;\n    height: auto;\n    border-radius: 1000%;\n}\n\n.teamCards{\n\n\n    align-items: center;\n    background-color: var(--color-bg-light);\n    border-radius: 10px;\n    box-shadow: 0 0 10px rgb(0 0 0 / 10%);\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    padding: 3rem 2rem;\n    text-align: center;\n}\n.teamCards p{\n    color: #9CC7E8;\n    font-weight: bold;\n}\n.containerTeam{\n    margin: 3rem 7rem;\n}\n\n.containerPortafolio{\n    margin: 3rem 7rem;\n}\n.viewPortafolio{\n    display: grid;\n    grid-gap: 2rem;\n    gap: 7rem;\n    grid-template-columns: repeat(2,minmax(250px,1fr));\n    margin: 4rem 0;\n    width: 100%;\n}\n\n.cardPortafolio{\n    margin-top: 10%;\n    border: 1px solid transparent;\n    border-radius: 10px;\n    box-shadow: 0 0 10px rgb(0 0 0 / 10%);\n    display: flex;\n    flex-direction: column;\n    position: relative;\n    background-color: white;\n    height: auto;\n\n}\n\n.tecnologies {\n    height: 30px;\n    margin-right: 15px;\n    background-color: #9CC7E8;\n    border-radius: 20px;\n    padding: 8px;\n    font-size: 15px;\n    color: white;\n}\n\n.cv{\n    height: 30px;\n    margin-right: 15px;\n    background-color: #9CC7E8;\n    border-radius: 20px;\n    padding: 10px;\n    font-size: 20px;\n    color: white;\n}\n\n\n//mensaje animacion \n.message {\n    overflow: hidden;\n    border-right: .15em solid orange; /* Puedes ajustar el color y el grosor del cursor de escritura */\n    white-space: nowrap;\n    margin: 0 auto;\n    letter-spacing: .15em;\n    animation:\n      typing 3.5s steps(40, end),\n      blink-caret .75s step-end infinite;\n  }\n  \n  @keyframes typing {\n    from {\n      width: 0;\n    }\n    to {\n      width: 100%;\n    }\n  }\n  \n  @keyframes blink-caret {\n    from, to {\n      border-color: transparent;\n    }\n    50% {\n      border-color: orange;\n    }\n  }\n\n  "
+        }
+    ]
+}

@@ -1,0 +1,380 @@
+// inician cambios del navbar 
+
+.navbar{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(249, 249, 249, 0.695);
+    
+}
+.containerMain{
+    padding: 0 5rem;
+    margin-top: -2rem;
+}
+.logo{
+    color: black;
+    padding: 14px 180px;
+    text-decoration: none;
+    float: left;
+}
+
+
+li a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+    margin-right: 30px;
+}
+
+.content ul{
+    list-style-type: none;
+    color: black;
+    padding: 14px 160px;
+    text-decoration: none !important;
+    
+}
+.content li{
+    
+    float: right;
+    margin-right: 30px;
+    
+}
+//termianan cambios del navbar 
+
+// start container about me
+//.container{
+//    padding: 0 3rem;
+//}
+//start class home 
+.home{
+    padding: 11.5rem  7rem;  
+    gap: 24%;
+    display: flex;
+    
+}
+.message{
+   
+    background-color:  #9CC7E8; //this shit is gonna be change
+    border-radius: 20px 20px 20px 0;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+ 
+    
+}
+.myName{
+    font-size: 4rem;
+    font-weight: 700;
+    
+}
+.work{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0;
+}
+.myInfo{
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    
+}
+.myInfo a{
+    cursor: pointer;
+}
+
+.Photo img{
+    
+    border-radius: 1000px;
+    width: 19 rem !important;
+}
+.Photo{
+    margin-top: 0rem;
+}
+
+.contactNet{
+    display: flex;
+    gap: 0.8rem;
+}
+//finish container
+
+//star containter abaut my experience
+
+//.container1{
+//    padding: 0 3rem;
+//    margin-top: -2rem;
+//}
+.myExperience{
+    align-items: center;
+    background-color: rgb(249, 249, 249);
+    border-radius: 5rem;
+    box-shadow: 0 7px 10px rgb(0 0 0 / 10%);
+    display: flex;
+    justify-content: space-around;
+    margin: -2.5rem 7rem;
+    padding: 1rem 5rem;
+}
+.yearExperience{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.line{
+    border-left: 2px solid #979696;
+    height: 2rem;
+}
+
+.logoExp{
+    margin-right: 1rem;
+    padding: 0.5rem;
+    width: 80px;
+}
+.aboutMe{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8rem 0;
+    width: 100%;
+
+}
+
+.containerAboutMe{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem 7rem;
+
+    padding: 9rem 0rem;
+    gap: 26%;
+
+
+}
+
+
+.containerSoftKills{
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-top: 50px;
+    padding: 0 7rem;
+    gap: 6%;
+}
+.line1{
+    border-bottom: solid 3px  #9CC7E8;
+    width: 57%;
+    height: 25px;
+}
+.viewSF{
+    display: grid;
+    grid-gap: 1.5rem;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3,minmax(250px,1fr));
+    margin-bottom: 4rem;
+    width: 80%;
+    margin: 3rem 7rem;
+    
+}
+.cardsSF{
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: inset 5px 5px 10px #f0f0f0,
+                inset -5px -5px 10px #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    color: rgb(130, 130, 130);
+}
+.cardImg img{
+    height: 90px;
+    width: 90px;
+}
+.cardsSF:hover{
+    color:  #9CC7E8;
+
+    font-weight: bold;
+    
+}
+.cardImg{
+    margin: auto auto 2rem;
+    width: 50%;
+    text-align: center;
+}
+
+.viewSk{
+    margin: 2rem 7rem;
+    display: grid;
+    grid-gap: 4rem;
+    gap: 4rem;
+    grid-template-columns: repeat(6,minmax(40px,1fr));
+    margin-top: 3rem;
+    
+}
+.cardsSk{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.cardsSk img{
+    height: 40px;
+    width: 40px;
+    padding-left: 2%;
+}
+
+.projectIdea{
+    background-color:  #9CC7E8;
+    color: #f3f3f3;
+    margin: 0 0 4rem;
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 50px;
+}
+.teamView{
+    display: grid;
+    grid-gap: 1rem;
+    gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    margin: 5rem 0;
+
+}
+.teamView img{
+    margin-bottom: 2rem;
+    width: 60%;
+    height: auto;
+    border-radius: 1000%;
+}
+
+.teamCards{
+
+
+    align-items: center;
+    background-color: var(--color-bg-light);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.teamCards p{
+    color: #9CC7E8;
+    font-weight: bold;
+}
+.containerTeam{
+    margin: 3rem 7rem;
+}
+
+.containerPortafolio{
+    margin-top: 40px;
+    margin: 3rem 7rem;
+}
+.viewPortafolio{
+    display: grid;
+    grid-gap: 2rem;
+    gap: 7rem;
+    grid-template-columns: repeat(2,minmax(250px,1fr));
+    margin: 4rem 0;
+    width: 100%;
+}
+
+.cardPortafolio{
+    margin-top: 10%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    height: auto;
+
+}
+
+.tecnologies {
+    height: 30px;
+    margin-right: 15px;
+    background-color: #9CC7E8;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 15px;
+    color: white;
+}
+
+.cv{
+    height: 30px;
+    margin-right: 15px;
+    background-color: #9CC7E8;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 20px;
+    color: white;
+}
+
+
+//mensaje animacion 
+.message {
+    overflow: hidden;
+    border-right: .15em solid rgb(255, 255, 255);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing-message 3s steps(40, end),
+               blink-caret .75s step-end infinite;
+  }
+  
+  .myName {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing-name 2s steps(40, end) 2s forwards,
+               blink-caret .75s step-end infinite; /* Agregada animación de cursor */
+    opacity: 0;
+  }
+  
+  @keyframes typing-message {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes typing-name {
+    from {
+      width: 0;
+      opacity: 0;
+    }
+    to {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgb(199, 241, 242);
+    }
+  }
+  
