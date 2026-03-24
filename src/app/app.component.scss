@@ -7,6 +7,11 @@
     background-color: rgba(249, 249, 249, 0.695);
     
 }
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: rgba(249, 249, 249, 0.695);
+    color: black;
+  }
 .containerMain{
     padding: 0 5rem;
     margin-top: -2rem;
@@ -41,6 +46,42 @@ li a {
     
 }
 //termianan cambios del navbar 
+
+
+
+
+// inician cambios del navbar responsive
+/* Estilos de la barra de navegación */
+.navbar1 {
+    overflow: hidden;
+    background-color: rgba(249, 249, 249, 0.695);
+    padding: 1rem; /* Ajusta el espaciado según sea necesario */
+  }
+  
+  /* Estilos del logo y del ícono de hamburguesa */
+  .logo1 {
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .logo1 i {
+    font-size: 1.5rem; /* Ajusta el tamaño del ícono según sea necesario */
+  }
+  
+
+
+//termianan cambios del navbar 
+/* Añade al final de tu archivo de estilos CSS */
+
+
+
+
+  
+  
+
+
+
+
 
 // start container about me
 //.container{
@@ -84,6 +125,18 @@ li a {
     margin-top: 0;
     
 }
+
+.myInfoPhone{
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+.myInfoPhone a{
+    cursor: pointer;
+}
 .myInfo a{
     cursor: pointer;
 }
@@ -91,10 +144,13 @@ li a {
 .Photo img{
     
     border-radius: 1000px;
-    width: 19 rem !important;
+    width: 25rem !important;
 }
 .Photo{
     margin-top: 0rem;
+}
+.imgMe{
+ font-size:  25rem;
 }
 
 .contactNet{
@@ -326,8 +382,31 @@ li a {
     font-size: 20px;
     color: white;
 }
+.spanExp{
+    font-size: 2rem;
+ font-weight: 600;
+}
+.projectDone{
+  color:  #9CC7E8;
+   font-size: .9rem;
+    font-weight: 700;
+    margin-bottom: 0;
+     margin-top: 0.2rem;
+}
+.yearExp{
+color:  #9CC7E8;
+ font-size: .9rem;
+  font-weight: 700;
+  margin-bottom: 0;
+margin-top: 0.2rem;
+}
 
-
+.photo-about-me{
+width: 19rem;
+}
+.tittleBoutMe{
+    font-size: 60px;
+}
 //mensaje animacion 
 .message {
     overflow: hidden;
@@ -349,6 +428,27 @@ li a {
     opacity: 0;
   }
   
+  .footer {
+    background-color: rgb(250, 250, 250);
+    color: black;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+  .emailContact{
+    text-decoration: none; color:black
+}
+  .numberContact{
+    text-decoration: none; color:black
+  }
+  
+  .title-soft-kills{
+    color: #9CC7E8 ; font-size: 40px;
+  }
+  .footer p {
+    margin: 0;
+  }
   @keyframes typing-message {
     from {
       width: 0;
@@ -376,5 +476,400 @@ li a {
     50% {
       border-color: rgb(199, 241, 242);
     }
+  }
+  
+
+
+
+
+  @media screen and (min-width: 320px) and (max-width: 375px) {
+    .navbar{
+        display: none;
+     }
+ 
+     .containerMain{
+         padding: 1rem;
+     }
+ 
+     .home{
+         padding: 9.5rem 1rem;
+         display: grid;
+     }
+     .Photo{
+         margin-top: -50rem;
+         width: 17rem;
+        
+     }
+     .infoL{
+         margin-top: 300px;
+     }
+     
+     .message{
+         font-size: 16px;
+         width: 20rem;
+         margin-left: 0px;
+     }
+     .myName{
+         font-size: 40px;
+     }
+ 
+     .myExperience{
+         width: 21rem;
+         margin-left: -2px;
+         margin-top: -100px;
+         display: grid;
+         border-radius: 10px;
+     }
+     .logoExp{
+         margin-right:0px ;
+     }
+     .spanExp{
+         font-size: 12px;
+     }
+   
+     .yearExp{
+         font-size: 11px;
+     }
+     .projectDone{
+         font-size: 11px;
+     }
+     .yearExperience{
+         margin-left: 10px;
+   margin-right: 23px;
+ 
+     }
+     .line{
+         display: none;
+     }
+     .photo-about-me{
+         display: none;
+     }
+     .containerAboutMe{
+ 
+         margin: 17px;
+         margin-left: 17px;
+        
+         margin-left: -133px;
+     }
+     .tittleBoutMe{
+         font-size: 40px;
+     }
+     .cv{
+         align-items: center;
+   display: flex;
+   width: 5rem;
+   text-decoration: none;
+   margin-left: 115px;
+     }
+     .Photo img{
+     
+        
+         width: 17rem !important;
+         margin-left: 25px;
+     }
+     .myName{
+         margin-left: 0px;
+     }
+     .myInfo{
+         margin-left: 36px;
+     }
+     .myInfoPhone{
+         margin-left: 72px;
+     }
+     .work{
+         margin-left: 26px;
+     }
+     .contactNet{
+         margin-left: 105px;
+     }
+
+        .viewSF{
+            grid-template-columns: repeat(1, minmax(250px, 1fr));
+            margin: 10px 55px;
+            height: 60%;
+            width: 60%;
+        }
+   
+     
+     .tittleSF{
+         margin-left: -72px;
+     }
+     .viewSk{
+         grid-template-columns: repeat(3, minmax(40px, 1fr));
+         margin: 30px;
+     }
+     .containerPortafolio{
+         margin: 0px;
+     }
+     .viewPortafolio{
+         grid-template-columns: repeat(1, minmax(250px, 1fr));
+     }
+     .cardPortafolio{
+         width: 21rem;
+     }
+     .logo1{
+         padding: 11px 43px;
+     }
+     .theme-toggle {
+         margin-top: 13px;
+         margin-left: -22px;
+         position: fixed;
+         right: 15px;
+       }
+     
+}
+
+
+
+  @media screen and (min-width: 376px) and (max-width: 480px) {
+    .navbar{
+       display: none;
+    }
+
+    .containerMain{
+        padding: 1rem;
+    }
+
+    .home{
+        padding: 9.5rem 1rem;
+        display: grid;
+    }
+    .Photo{
+        margin-top: -50rem;
+        width: 17rem;
+       
+    }
+    .infoL{
+        margin-top: 300px;
+    }
+    
+    .message{
+        font-size: 16px;
+        width: 23rem;
+        margin-left: 0px;
+    }
+    .myName{
+        font-size: 40px;
+    }
+
+    .myExperience{
+        width: 23rem;
+        margin-left: 15px;
+        margin-top: -100px;
+        display: grid;
+        border-radius: 10px;
+    }
+    .logoExp{
+        margin-right:0px ;
+    }
+    .spanExp{
+        font-size: 12px;
+    }
+  
+    .yearExp{
+        font-size: 11px;
+    }
+    .projectDone{
+        font-size: 11px;
+    }
+    .yearExperience{
+        margin-left: 10px;
+  margin-right: 23px;
+
+    }
+    .line{
+        display: none;
+    }
+    .photo-about-me{
+        display: none;
+    }
+    .containerAboutMe{
+
+        margin: 17px;
+        margin-left: 17px;
+       
+        margin-left: -133px;
+    }
+    .tittleBoutMe{
+        font-size: 40px;
+    }
+    .cv{
+        align-items: center;
+  display: flex;
+  width: 5rem;
+  text-decoration: none;
+  margin-left: 115px;
+    }
+    .Photo img{
+    
+       
+        width: 17rem !important;
+        margin-left: 50px;
+    }
+    .myName{
+        margin-left: 23px;
+    }
+    .myInfo{
+        margin-left: 56px;
+    }
+    .myInfoPhone{
+        margin-left: 93px;
+    }
+    .work{
+        margin-left: 40px;
+    }
+    .contactNet{
+        margin-left: 126px;
+    }
+    .viewSF{
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+        margin: 10px 75px;
+        height: 60%;
+        width: 60%;
+    }
+    
+    .tittleSF{
+        margin-left: -72px;
+    }
+    .viewSk{
+        grid-template-columns: repeat(3, minmax(40px, 1fr));
+        margin: 30px;
+    }
+    .containerPortafolio{
+        margin: 25px;
+    }
+    .viewPortafolio{
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+    .cardPortafolio{
+        width: 22rem;
+    }
+    .logo1{
+        padding: 11px 43px;
+    }
+    .theme-toggle {
+        margin-top: 13px;
+        margin-left: -22px;
+        position: fixed;
+        right: 15px;
+      }
+      
+}
+
+@media  screen and (min-width: 1025px) {
+    .navbar1{
+        display: none;
+    }
+    
+  }
+
+
+.footer-text{
+    color: black;
+}
+//modo noche 
+  .night-mode  p{
+   
+    color: #ffffff; /* Color del texto en modo noche */
+
+  }
+  .night-mode {
+    background-color: #111827; /* Fondo del body en modo noche */
+    color: #ffffff; /* Color del texto en modo noche */
+    
+  }
+  .night-mode .body {
+    background-color: #111827 !important; /* Fondo del body en modo noche */
+    
+    
+  }
+
+.night-mode .bar-line{
+    border: 1px solid #eee;
+   
+}
+  .night-mode a{
+   
+    color: #ffffff; /* Color del texto en modo noche */
+  }
+  .night-mode .message{
+   background-color:  #89a0b160;
+  }
+  .night-mode .myInfo{
+    color: #ffffff;
+  }
+  .night-mode .imgContactNet{
+    background-color: #f8f8f8;
+    border-radius: 5px;
+  }
+  .night-mode .myExperience{
+    background-color:  #89a0b160;
+  }
+  .night-mode .cardsSF{
+    
+    border-radius: 20px;
+background: #89a0b160;
+box-shadow: inset 5px 5px 11px #6c7e8c,
+            inset -5px -5px 11px #a6c2d6;
+  }
+  .night-mode .title-soft-kills{
+    color: #89A0B1;
+  }
+  .night-mode .title-soft-kills{
+    color: #89A0B1;
+  }
+
+
+  .night-mode .projectIdea{
+    background: #89a0b160;
+
+  }
+  .night-mode .cv{
+    background: #89a0b160;
+  }
+  .night-mode .viewPortafolio p{
+    color: white;
+  }
+  .night-mode .cardPortafolio{
+    border-radius: 20px;
+    background: #89a0b160;
+    box-shadow: inset 5px 5px 11px #6c7e8c, inset -1px -1px 1px #a6c2d6
+  }
+  
+  .night-mode .tecnologies{
+    background: #89a0b160;
+  }
+  /* Estilos para el modo noche */
+  .night-mode body {
+    background-color: #1b2735;
+    color: #ffffff;
+  }
+
+  .night-mode .theme-toggle button{
+    background-color: #89a0b160;
+  }
+  .night-mode .footer a{
+    color: white;
+  }
+
+
+
+
+  .theme-toggle {
+    position: fixed;
+    top: 114px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .theme-toggle button {
+    /* Estilos adicionales según tus preferencias */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:  #9cc7e847;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
   }
   
